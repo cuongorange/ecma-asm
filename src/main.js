@@ -6,6 +6,9 @@ import newsDetailPage from "./pages/newsDetail";
 import notFoundPage from "./pages/notFound";
 import productPage from "./pages/product";
 
+import AdminNewsPage from "./pages/admin/news";
+import SignUp from "./pages/signup";
+import NewList from "./components/admin/NewList";
 const router = new Navigo("/", { linksSelector: "a" });
 
 const print = (content) => {
@@ -28,6 +31,17 @@ router.on({
    "/newsDetail": () => {
     print(newsDetailPage.render());
   },
+  "/admin/news/add": () => {
+    console.log("12");
+    print(AddNewsPage.render());
+},
+"/Signup": () => {
+    print(SignUp.render());
+},
+"/admin/new/list": () => {
+    print(NewList.render());
+},
+
 });
 router.notFound(() => print(notFoundPage.render()));
 router.resolve();

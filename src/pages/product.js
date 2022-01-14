@@ -1,6 +1,9 @@
-const productPage = {
+const ProductPage = {
     render() {
-        return `Product Page`;
+        return /* html */`
+            <div class="max-w-5xl mx-auto">
+                <h1>Product Page</h1>
+            </div>`;
     },
 };
-export default productPage;
+export default ProductPage;
